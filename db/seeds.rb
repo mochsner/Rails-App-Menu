@@ -5,6 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' , name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+user_list = [
+	[ "user1","glbrcpass" ],
+	[ "user2","glbrcpss" ],
+	[ "user3","glbrcpss" ],
+]
+user_list.each do |login,password|
+  User.create( login: login, Password: password )
+end
+
 apps = Application.create([
 { name: 'Google', description: 'Search Engine', Color: 'Red', DefaultStatus: 'Yes', Link: 'http://www.google.com'},
 { name: 'Wisc', description: 'UW homepage', Color: 'Blue', DefaultStatus: 'No', Link: 'http://www.wisc.edu'},
@@ -12,13 +22,6 @@ apps = Application.create([
 { name: 'WEI', description: 'Wisconsin Energy Institute', Color: 'Green', DefaultStatus: 'No', Link: 'https://energy.wisc.edu/'},
 { name: 'Twitter', description: 'Twitter', Color: 'Purple', DefaultStatus: 'No', Link: 'https://twitter.com'}])
 
-user_list = [
-	[ "user1","glbrcpass" ]
-	[ "user2","glbrcpss" ]
-	[ "user3","glbrcpss" ]
-user_list.each do |login,password|
-  User.create( login: login, Password: password )
-end
 #country_list = [
 #  [ "Germany", 81831000 ],
 #  [ "France", 65447374 ],
