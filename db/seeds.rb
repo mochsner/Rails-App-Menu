@@ -10,6 +10,8 @@ user_list = [
 	[ "user1","glbrcpass" ],
 	[ "user2","glbrcpss" ],
 	[ "user3","glbrcpss" ],
+	[ "amt","tuurtell" ],
+	[ "ann-marie","tuurtell" ],
 ]
 user_list.each do |login,password|
   User.create( login: login, Password: password )
