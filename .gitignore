@@ -15,3 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore Gemfile.lock (local)
+Gemfile.lock
+
+# Ignore Docker
+Dockerfile
+
