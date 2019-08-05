@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' , name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-=begin================================================================================
+=begin
+================================================================================
 	Model: User
 	View: NULL
 	Controller: NULL
@@ -26,7 +27,8 @@ user_list.each do |login,password|
   User.create( login: login, Password: password )
 end
 
-=begin================================================================================
+=begin
+================================================================================
 	Model: App
 	View: app.html.erb
 	Controller: NULL
@@ -39,17 +41,18 @@ end
 		Link
 =end
 app_list = [
-	['Google','Search Engine','Red','Yes','http://www.google.com')
-	['Wisc','UW homepage','Blue','No','http://www.wisc.edu')
-	['GLBRC','Great Lakes Bioenergy Research Center','Yellow','Yes','http://www.glbrc.org')
-	['WEI','Wisconsin Energy Institute','Green','No','https://energy.wisc.edu/')
-	['Twitter','Twitter','Purple','No','https://twitter.com')
+	['Google','Search Engine','Red','Yes','http://www.google.com'],
+	['Wisc','UW homepage','Blue','No','http://www.wisc.edu'],
+	['GLBRC','Great Lakes Bioenergy Research Center','Yellow','Yes','http://www.glbrc.org'],
+	['WEI','Wisconsin Energy Institute','Green','No','https://energy.wisc.edu/'],
+	['Twitter','Twitter','Purple','No','https://twitter.com']
 ]
 app_list.each do |name,description,color,defaultstatus,link|
-  User.create( name:name, description:description, Color:color, DefaultStatus:defaultstatus, Link:link )
+  App.create( name:name, description:description, Color:color, DefaultStatus:defaultstatus, Link:link )
 end
 
-=begin================================================================================
+=begin
+================================================================================
 	Model: UserApps
 	View: userapp
 	Controller: 
@@ -70,3 +73,12 @@ end
 			App_ID (literal) = ...
 			App_ID (literal) = N-1
 =end
+
+# user_list.each do | login, password |
+# 	apps.each do |u|
+# 		UserApps.create( User_ID: )
+# 	end
+# end
+# userapps_list = [
+	
+# ]
