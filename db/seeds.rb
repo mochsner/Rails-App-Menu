@@ -47,7 +47,7 @@ app_list = [
 	['WEI','Wisconsin Energy Institute','Green','No','https://energy.wisc.edu/'],
 	['Twitter','Twitter','Purple','No','https://twitter.com']
 ]
-app_list.each do |name,description,color,defaultstatus,link|
+app_list.each do |name, description, color, defaultstatus, link|
   App.create( name:name, description:description, Color:color, DefaultStatus:defaultstatus, Link:link )
 end
 
@@ -61,24 +61,29 @@ end
 		UserApps_ID: #
 		User_ID=User.User_ID 
 		DECIDE (based on front-end/view limitations):
-			App_ID_0 = App.ID (literal)
-			App_ID_1 = App.ID (literal)
-			App_ID_... = App.ID (literal)
-			App_ID_N-1 = App.ID (literal)
-
-			~OR~
-
-			App_ID (literal) = 0
-			App_ID (literal) = 1
-			App_ID (literal) = ...
-			App_ID (literal) = N-1
+			App_ID (literal) = 1 
+			App_ID (literal) = 2 
+			App_ID (literal) = ... 
+			App_ID (literal) = N 
 =end
 
-# user_list.each do | login, password |
-# 	apps.each do |u|
-# 		UserApps.create( User_ID: )
-# 	end
-# end
-# userapps_list = [
-	
-# ]
+user_id = 0
+app_sequence = 0
+
+user_list.each do | login, password |
+	user_id += 1
+	user_app = UserApp.new
+	UserApp[:User_ID] = user_id
+
+	app_id = 1
+	app_list.each do | name, description, color, defaultstatus, link |
+		if defaultstatus == 'Yes'
+			app_sequence += 1
+			UserApp[:@app_id] = @app_sequence
+		else
+			UserApp[:@app_id] = 0
+		end
+	end
+
+	UserApp.create( user_app )
+end
