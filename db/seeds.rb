@@ -17,17 +17,17 @@ user_list.each do |login,password|
   User.create( login: login, Password: password )
 end
 
-#apps = Application.create([
+#apps = App.create([
 #{ name: 'Google', description: 'Search Engine', Color: 'Red', DefaultStatus: 'Yes', Link: 'http://www.google.com'},
 #{ name: 'Wisc', description: 'UW homepage', Color: 'Blue', DefaultStatus: 'No', Link: 'http://www.wisc.edu'},
 #{ name: 'GLBRC', description: 'Great Lakes Bioenergy Research Center', Color: 'Yellow', DefaultStatus: 'Yes', Link: 'http://www.glbrc.org'},
 #{ name: 'WEI', description: 'Wisconsin Energy Institute', Color: 'Green', DefaultStatus: 'No', Link: 'https://energy.wisc.edu/'},
 #{ name: 'Twitter', description: 'Twitter', Color: 'Purple', DefaultStatus: 'No', Link: 'https://twitter.com'}])
-Application.create( name: 'Google', description: 'Search Engine', Color: 'Red', DefaultStatus: 'Yes', Link: 'http://www.google.com')
-Application.create( name: 'Wisc', description: 'UW homepage', Color: 'Blue', DefaultStatus: 'No', Link: 'http://www.wisc.edu')
-Application.create( name: 'GLBRC', description: 'Great Lakes Bioenergy Research Center', Color: 'Yellow', DefaultStatus: 'Yes', Link: 'http://www.glbrc.org')
-Application.create( name: 'WEI', description: 'Wisconsin Energy Institute', Color: 'Green', DefaultStatus: 'No', Link: 'https://energy.wisc.edu/')
-Application.create( name: 'Twitter', description: 'Twitter', Color: 'Purple', DefaultStatus: 'No', Link: 'https://twitter.com')
+App.create( name: 'Google', description: 'Search Engine', Color: 'Red', DefaultStatus: 'Yes', Link: 'http://www.google.com')
+App.create( name: 'Wisc', description: 'UW homepage', Color: 'Blue', DefaultStatus: 'No', Link: 'http://www.wisc.edu')
+App.create( name: 'GLBRC', description: 'Great Lakes Bioenergy Research Center', Color: 'Yellow', DefaultStatus: 'Yes', Link: 'http://www.glbrc.org')
+App.create( name: 'WEI', description: 'Wisconsin Energy Institute', Color: 'Green', DefaultStatus: 'No', Link: 'https://energy.wisc.edu/')
+App.create( name: 'Twitter', description: 'Twitter', Color: 'Purple', DefaultStatus: 'No', Link: 'https://twitter.com')
 
 
 #country_list = [
