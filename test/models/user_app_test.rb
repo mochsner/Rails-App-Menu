@@ -1,7 +1,6 @@
 require 'test_helper'
 
-class AppTest < ActiveSupport::TestCase
-  # set_fixture_class apps:
+class UserAppTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

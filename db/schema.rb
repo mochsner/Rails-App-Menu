@@ -10,17 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190805035831) do
-
-  create_table "applications", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "Color"
-    t.string   "DefaultStatus"
-    t.string   "Link"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
+ActiveRecord::Schema.define(version: 20190805085151) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +20,18 @@ ActiveRecord::Schema.define(version: 20190805035831) do
     t.string   "Link"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "user_apps", force: :cascade do |t|
+    t.string   "user_id"
+    t.integer  "app_1"
+    t.integer  "app_2"
+    t.integer  "app_3"
+    t.integer  "app_4"
+    t.integer  "app_5"
+    t.integer  "app_6"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

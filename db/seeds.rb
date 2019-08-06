@@ -68,22 +68,23 @@ end
 =end
 
 user_id = 0
-app_sequence = 0
 
 user_list.each do | login, password |
-	user_id += 1
-	user_app = UserApp.new
-	UserApp[:User_ID] = user_id
-
-	app_id = 1
+	user_app = {}
+	app_id = 0
+	app_sequence = 0
 	app_list.each do | name, description, color, defaultstatus, link |
+		app_id += 1
 		if defaultstatus == 'Yes'
 			app_sequence += 1
-			UserApp[:@app_id] = @app_sequence
+			user_app['app_'+app_id.to_s] = app_sequence
 		else
-			UserApp[:@app_id] = 0
+			user_app['app_'+app_id.to_s] = 0
 		end
 	end
 
+	user_id += 1
+	user_app['user_id'] = user_id
+	puts user_app
 	UserApp.create( user_app )
 end

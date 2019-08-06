@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  app_1: 
+  app_2: 
+  app_3: 
+  app_4: 
+  app_5: 
+  app_6: 
+
+two:
+  user_id: MyString
+  app_1: 
+  app_2: 
+  app_3: 
+  app_4: 
+  app_5: 
+  app_6: 
