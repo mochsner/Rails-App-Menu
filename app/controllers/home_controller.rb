@@ -1,8 +1,5 @@
 class HomeController < ApplicationController
 
-    def test
-      return render_userapps
-    end
 
     def render_apps
       @apps = App.all 
@@ -19,6 +16,7 @@ class HomeController < ApplicationController
       render json: @userapps.to_json()
     end
 
+
     def get_apps
       @apps = App.all 
       return @apps
@@ -29,7 +27,17 @@ class HomeController < ApplicationController
       return @users
     end
 
-    def all_userapps
-      @userapps = get_apps 
+    def get_userapps
+      @userapps = UserApp.all
+      return @userapps 
+    end
+
+    def index
+    end
+    def login
+    end
+    def _header
+    end
+    def _footer
     end
 end

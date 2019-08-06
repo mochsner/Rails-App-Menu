@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-    # attr_accessible :login, :Password
+    attr_accessor :login, :Password
     # has_many :apps
 end
