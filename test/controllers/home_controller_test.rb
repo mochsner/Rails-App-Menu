@@ -1,22 +1,21 @@
 require 'test_helper'
 
 class HomeControllerTest < ActionDispatch::IntegrationTest
-  # test "should get home" do
-  #   get home_index
-  #   assert_response :success
-  # end
+  def setup
+    @base_title = "Rails App Menu" 
+  end
 
-  # test "should get login" do
-  #   get home_login
-  #   assert_response :success
-  # end
+  test "should get index" do
+    get home_index_url
+    assert_response :success
+    assert_select "title", "Index | #{@base_title}"
+  end
+
+  test "should get login" do
+    get home_login_url
+    assert_response :success
+    assert_select "title", "Login | #{@base_title}"
+  end
   
-  # test "should get footer" do
-  #   get layouts_footer_url
-  #   assert_response :success
-  # end
-  # test "should get header" do
-  #   get layouts_header_url
-  #   assert_response :success
-  # end
+
 end
